@@ -1,0 +1,57 @@
+name: Report a bug
+description: Something in Vinci Code is broken or behaves wrong
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Short and concrete is better than long and thorough.
+
+        **Please don't paste API keys, tokens, or private source code.** Issues here are public.
+        If reproducing it needs something sensitive, say so and we'll find another way.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What you expected, and what Vinci Code did instead.
+      placeholder: I asked it to run the tests. It said they passed, but they hadn't run.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+      description: What you typed or asked for, step by step. Even a rough sequence helps.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Which version?
+      description: Run `/version` inside Vinci Code, or `vinci --version`.
+      placeholder: "0.0.35"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Linux
+        - Windows (WSL)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Error output, a screenshot, or what you were in the middle of. Optional.
+    validations:
+      required: false

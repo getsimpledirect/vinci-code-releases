@@ -1,0 +1,35 @@
+name: Request a feature
+description: Something is missing, or harder than it should be
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us the problem you hit, not just the feature you have in mind — the underlying
+        problem often has a better answer than the first solution that comes to mind.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What were you trying to do?
+      description: The task you were on when Vinci Code got in your way.
+      placeholder: I wanted to copy a long command it printed, but selecting it in my terminal is awkward.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: Your idea, if you have one. It's fine to leave this blank and let us figure it out.
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Which version?
+      description: Run `/version` inside Vinci Code, or `vinci --version`.
+      placeholder: "0.0.35"
+    validations:
+      required: false
