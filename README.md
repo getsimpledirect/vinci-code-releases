@@ -33,10 +33,13 @@ Two things make a report genuinely useful:
 Please don't paste API keys, tokens, or private source. If reproducing the problem needs
 something sensitive, say so in the issue and we'll find another way.
 
-## Releases
+## Staying up to date
 
-Every release is listed under [Releases](../../releases), newest first, with notes on what
-changed.
+Vinci Code updates itself — signed releases install automatically before your next task — so the
+install command above is normally the only one you ever run.
+
+Release notes are published under [Releases](../../releases). Check `/version` inside Vinci Code to
+see what you're on.
 
 ## Privacy
 
