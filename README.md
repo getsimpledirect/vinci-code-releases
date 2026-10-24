@@ -1,56 +1,51 @@
-# Vinci Code
+# Vinci Code Releases
 
-**Vinci Code is a coding agent that runs in your terminal.**
-
-This repository is where you **report issues** and **download releases**. The source is private;
-everything user-facing — bug reports, feature requests, release notes — happens here.
+Public downloads, release notes and the retained reporting surface for Vinci
+Code, the terminal coding agent. Current source and product development live
+in [vinci-code-cli](https://github.com/getsimpledirect/vinci-code-cli).
 
 ## Install
 
-Requires Node.js v22.19 or newer.
+Use Node.js 22.19 or newer and follow the
+[canonical installation instructions](https://github.com/getsimpledirect/vinci-code-cli#installation).
+The existing signed-release installer is:
 
 ```sh
 curl -fsSL https://vinci.getsimpledirect.com/install | sh
 ```
 
-Then run `vinci` and type `/login` to connect.
+Run `vinci`, use `/login` to configure an available provider, and inspect
+`vinci --version` or `/version` for the installed version. Bringing your own
+provider key does not require a Vinci account. Managed-service admission is
+separate from installation and is not promised by this feed.
 
-Vinci Code updates itself: signed releases install automatically before your next task, so you
-normally never run the installer twice.
+## Releases and compatibility
 
-## Report a bug or request a feature
+Browse [Releases](https://github.com/getsimpledirect/vinci-code-releases/releases)
+for retained assets and notes. Current product release authority belongs to the
+public source repository's protected workflow. Preserve existing asset links
+and release consumers until their migration is verified; this repository does
+not authorize a second build or signing process.
 
-Open an issue using one of the templates:
+The installed product verifies its signed update manifest and archive hash.
+To assess a particular update, inspect the artifact actually served and its
+version; a green workflow or release listing is not download verification.
 
-- **[Report a bug](../../issues/new?template=bug.yml)** — something is broken or behaves wrong
-- **[Request a feature](../../issues/new?template=feature.yml)** — something is missing or awkward
+## Bugs, support and security
 
-Two things make a report genuinely useful:
+Use the [current support guide](https://github.com/getsimpledirect/vinci-code-cli/blob/main/SUPPORT.md)
+for the right reporting destination. Existing reports here remain part of the
+project history. Include your version, expected behavior, actual behavior and
+a minimal reproduction that contains no private source, tokens or API keys.
 
-1. **What you expected versus what happened.** Concrete beats general.
-2. **Your version** — run `/version` inside Vinci Code, or `vinci --version`.
+For vulnerabilities, follow the
+[current security policy](https://github.com/getsimpledirect/vinci-code-cli/blob/main/SECURITY.md).
+Issues and attachments here are public.
 
-Please don't paste API keys, tokens, or private source. If reproducing the problem needs
-something sensitive, say so in the issue and we'll find another way.
+## License and provenance
 
-## Staying up to date
-
-Vinci Code updates itself — signed releases install automatically before your next task — so the
-install command above is normally the only one you ever run.
-
-Release notes are published under [Releases](../../releases). Check `/version` inside Vinci Code to
-see what you're on.
-
-## Privacy
-
-Vinci Code is zero-data-retention by default: your conversations and code are not stored
-server-side. Issues you file here are public — treat them as public.
-
-## Credits and license
-
-Vinci Code is built and maintained by [SimpleDirect](https://getsimpledirect.com).
-
-It is a thin fork of **[Pi (pi-mono)](https://github.com/badlogic/pi-mono)**, Copyright (c) 2025
-Mario Zechner, used under the MIT License. Upstream Pi source is used unmodified; SimpleDirect's
-additions live in a separate directory. The MIT License and copyright notice are retained per the
-license terms.
+Vinci Code is based on [Pi](https://github.com/badlogic/pi-mono), copyright
+© 2025 Mario Zechner. Pi and Vinci's published modifications retain the
+[MIT license](LICENSE), including the Alpine Pacific Trading Inc. notice.
+Artifact-specific third-party notices and trademark restrictions remain in
+force. A software license is not a confidentiality or access-control mechanism.
